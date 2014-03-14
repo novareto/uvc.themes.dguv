@@ -8,12 +8,19 @@ version = '0.1-dev'
 readme = open('README.txt').read()
 history = open(join('docs', 'HISTORY.txt')).read()
 
+
 install_requires = [
+    'uvc.design.canvas',
     'zope.interface',
+    'fanstatic',
+    'js.bootstrap',
+    'uvclight',
     ]
+
 
 tests_require = [
     ]
+
 
 setup(name=name,
       version=version,
@@ -39,7 +46,9 @@ setup(name=name,
           'Operating System :: OS Independent',
           'Programming Language :: Python',
           ],
-      entry_points="""
-      # -*- Entry points: -*-
-      """,
+      entry_points={
+         'fanstatic.libraries': [
+            'uvc.themes.dguv = uvc.themes.dguv.resources:library',
+            ],
+        }
       )
