@@ -1,23 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from .menus import (
-    IGlobalMenu,
-    IPersonalPreferences,
-    IFooterMenu,
-    IDocumentActions,
-    IExtraViews,
-    IPersonalMenu,
-    IContextualActionsMenu,
-    ISubMenu,
-    )
+from cromlech.browser import ITypedRequest
 
-from .managers import (
-    
-IPageTop
-ITabs
-IAboveContent
-IBelowContent
-IHeaders
-IToolbar
-IFooter
-IExtraInfo
+
+class IDGUVRequest(ITypedRequest):
+    pass
