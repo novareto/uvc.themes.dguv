@@ -13,8 +13,9 @@ install_requires = [
     'uvc.design.canvas',
     'zope.interface',
     'fanstatic',
-    'js.bootstrap',
+    'js.bootstrap >= 3.0.2',
     'uvclight',
+    'uvc.basetheme',
     ]
 
 

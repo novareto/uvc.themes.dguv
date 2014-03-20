@@ -1,0 +1,22 @@
+#content {
+  top: 60px;
+  position: relative;
+}
+
+#global-submenus {
+  position: relative;
+  top: 10px;
+}
+
+#navigation {
+  position: absolute;
+  margin-top: -62px;
+}
+
+#navigation .active {
+  background-color: white;
+}
+
+#navigation > li > a {
+  margin-right: 0;
+}
