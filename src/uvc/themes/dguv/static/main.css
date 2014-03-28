@@ -1,11 +1,11 @@
 #content {
-  top: 60px;
+  top: 80px;
   position: relative;
 }
 
 #global-submenus {
-  position: relative;
-  top: 10px;
+  position: absolute;
+  top: 145px;
 }
 
 #navigation {
