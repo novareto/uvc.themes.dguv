@@ -1,0 +1,73 @@
+<html i18n:domain="dolmen.form.base">
+  <head>
+  </head>
+  <body>
+    <form metal:define-macro="editform" role="form" action="." tal:attributes="action view.action_url;
+                                     id view.htmlId();
+                                     method view.formMethod;
+                                     enctype view.enctype">
+
+      <h1 tal:condition="view.label"
+          tal:content="view.label">Label</h1>
+
+      <p tal:condition="view.description"
+         tal:content="view.description">Description</p>
+
+      <p class="form-status"
+         tal:condition="view.status"
+         tal:content="view.status">Status</p>
+
+      <div class="form-error"
+         tal:condition="view.errors">
+          <ul tal:condition="view.formErrors"
+              tal:repeat="error view.formErrors">
+            <li> <span tal:replace="error.title" /> </li>
+          </ul>
+      </div>
+
+      <div class="fields"
+           metal:define-macro="form-fieldset"
+           tal:condition="view.fieldWidgets">
+        <div tal:repeat="widget view.fieldWidgets"
+             tal:attributes="class widget.error and 'form-group has-error' or 'form-group'">
+          <label class="field-label" for="#"
+                 tal:attributes="for widget.htmlId()"
+                 tal:content="widget.title"
+                 tal:condition="widget.visible">
+            Label
+          </label>
+          <span class="field-required"
+                i18n:translate=""
+                tal:condition="widget.required and widget.visible"
+                > * </span>
+          <tal:description tal:condition="widget.description">
+            <span class="hilfe glyphicon glyphicon-question-sign"
+                  data-placement="right" 
+                  data-toggle="tooltip"
+                  tal:attributes="data-original-title widget.description">
+            </span>
+          </tal:description>
+          <tal:error tal:define="error widget.error"
+                     tal:condition="error">
+                     <br/>
+            <span class="field-error"
+                  tal:content="error.title">
+              Error
+            </span>
+          </tal:error>
+          <br/>
+          <tal:widget metal:define-macro="field-inline" tal:content="structure widget.render()" />
+        </div>
+      </div>
+
+      <div class="actions"
+           tal:condition="view.actionWidgets">
+        <div class="action" tal:repeat="widget view.actionWidgets">
+          <tal:widget metal:define-macro="action-inline" tal:content="structure widget.render()" />
+        </div>
+      </div>
+
+    </form>
+
+  </body>
+</html>
