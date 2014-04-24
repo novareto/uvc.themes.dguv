@@ -14,7 +14,6 @@ install_requires = [
     'zope.interface',
     'fanstatic',
     'js.bootstrap >= 3.0.2',
-    'uvclight',
     'uvc.basetheme',
     ]
 

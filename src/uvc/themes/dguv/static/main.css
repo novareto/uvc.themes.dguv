@@ -20,3 +20,96 @@
 #navigation > li > a {
   margin-right: 0;
 }
+
+
+/*
+.form-group textarea,
+.form-group input,
+.form-group select {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-group textarea:focus,
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.form-group input:-moz-placeholder {
+  color: #999999;
+}
+
+.form-group input:-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+
+.form-group textarea {
+  height: auto;
+}
+*/
+
+.field-error
+.field-error input,
+.field-error textarea,
+.field-error select {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.field-error input:focus,
+.field-error textarea:focus,
+.field-error select:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+
+.outlined-block-title {
+    background-color: #F5F5F5;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px 0;
+    color: #9DA0A4;
+    font-size: 12px;
+    font-weight: bold;
+    left: -1px;
+    padding: 3px 7px;
+    position: absolute;
+    top: -1px;
+}
+
+.outlined-block-title a {
+  text-decoration: none;
+  color: #666;
+}
+
+.outlined-block-title a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.outlined-block {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    margin: 35px 0 15px 0;
+    padding: 39px 19px 14px;
+    position: relative;
+}
