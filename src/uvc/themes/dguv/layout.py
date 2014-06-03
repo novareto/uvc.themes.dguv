@@ -6,7 +6,6 @@ from . import IDGUVRequest
 from .resources import main_css, main_js
 
 
-
 class Layout(uvclight.Layout):
     uvclight.context(Interface)
 
