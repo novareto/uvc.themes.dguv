@@ -2,7 +2,6 @@
 
 import uvclight
 from zope.interface import Interface
-from . import IDGUVRequest
 from .resources import main_css, main_js
 
 
