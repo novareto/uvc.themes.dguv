@@ -4,17 +4,23 @@ from os.path import join
 from setuptools import setup, find_packages
 
 name = 'uvc.themes.dguv'
-version = '0.1-dev'
+version = '0.1'
 readme = open('README.txt').read()
 history = open(join('docs', 'HISTORY.txt')).read()
 
 
 install_requires = [
+    'setuptools',
+    'cromlech.browser',
+    'dolmen.forms.base',
     'fanstatic',
+    'grokcore.component',
     'js.bootstrap >= 3.0.2',
+    'js.jquery',
     'uvc.basetheme',
     'uvc.design.canvas',
     'uvc.themes.btwidgets',
+    'uvclight',
     'zope.interface',
     ]
 
