@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from cromlech.browser import ITypedRequest
+from uvc.themes.btwidgets import IBootstrapRequest
 
 
-class IDGUVRequest(ITypedRequest):
+class IDGUVRequest(IBootstrapRequest):
     pass

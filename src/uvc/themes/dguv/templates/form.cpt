@@ -13,19 +13,18 @@
      tal:condition="view.status"
      tal:content="view.status">Status</p>
 
-  <div class="form-error" tal:condition="view.errors">
-    <ul tal:condition="view.formErrors"
-        tal:repeat="error view.formErrors">
-      <li> <span tal:replace="error.title" /> </li>
-    </ul>
+  <div tal:condition="view.errors and view.formErrors"
+       tal:repeat="error view.formErrors"
+       class="alert alert-danger">
+    <p tal:content="error.title" />
   </div>
 
   <div class="fields"
        metal:define-macro="form-fieldset"
        tal:condition="view.fieldWidgets">
     <div tal:repeat="widget view.fieldWidgets"
-         tal:attributes="class widget.error and 'form-group field-error' or 'form-group'">
-      <label class="field-label" for="#"
+         tal:attributes="class widget.error and 'form-group has-error' or 'form-group'">
+      <label class="field-label control-label" for="#"
              tal:attributes="for widget.htmlId()"
              tal:content="widget.title"
              tal:condition="widget.isVisible()">
@@ -42,17 +41,13 @@
               tal:attributes="data-original-title widget.description">
         </span>
       </tal:description>
-      <tal:error tal:define="error widget.error"
-                 tal:condition="error">
-        <br/>
-        <span class="field-error"
-              tal:content="error.title">
-          Error
-        </span>
-      </tal:error>
-      <br/>
+      <br />
       <tal:widget metal:define-macro="field-inline"
 		  tal:content="structure widget.render()" />
+
+      <p tal:condition="widget.error"
+	 class="field-error help-block" tal:content="widget.error.title" />
+
     </div>
   </div>
   

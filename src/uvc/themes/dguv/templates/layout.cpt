@@ -10,7 +10,13 @@
   </head>
   <body>
     <div id="top" class="container">
-      <div class="row" tal:content="structure slot:uvc-pagetop" />
+      <div class="row">
+	<div class="pull-right">
+	  <img class="img-responsive logo"
+	       src="/fanstatic/uvc.themes.dguv/logo.png" />
+	</div>
+	<tal:top content="structure slot:uvc-pagetop" />
+      </div>
     </div>
     <div class="container content-wrapper"  id="content">
       <div id="uvc-above-body" tal:content="structure slot:uvc-above-body" />

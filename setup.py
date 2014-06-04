@@ -10,11 +10,12 @@ history = open(join('docs', 'HISTORY.txt')).read()
 
 
 install_requires = [
-    'uvc.design.canvas',
-    'zope.interface',
     'fanstatic',
     'js.bootstrap >= 3.0.2',
     'uvc.basetheme',
+    'uvc.design.canvas',
+    'uvc.themes.btwidgets',
+    'zope.interface',
     ]
 
 
