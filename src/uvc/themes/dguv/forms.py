@@ -21,11 +21,11 @@ class ActionWidget(ActionWidget):
         return "action btn btn-default"
 
 
-@adapter(IForm, IDGUVRequest)
-@implementer(ITemplate)
-def form_template(context, request):
-    """default template for the menu"""
-    return uvclight.get_template('form.cpt', __file__)
+#@adapter(IForm, IDGUVRequest)
+#@implementer(ITemplate)
+#def form_template(context, request):
+#    """default template for the menu"""
+#    return uvclight.get_template('form.cpt', __file__)
 
 
 @adapter(IInlineForm, IDGUVRequest)

@@ -1,5 +1,5 @@
 <form i18n:domain="dolmen.forms.base"
-      metal:define-macro="editform" role="form" action="."
+      metal:define-macro="editformii" role="form" action="."
       tal:attributes="action view.action_url;
                       id view.htmlId();
                       method view.formMethod;
