@@ -9,10 +9,12 @@ from zope import interface
 from uvc.design.canvas.menus import GlobalMenu
 from uvc.design.canvas.viewlets import GlobalMenuViewlet
 from grokcore.component import adapter, implementer
+from . import IDGUVRequest
 
 
 class GlobalMenuViewlet(GlobalMenuViewlet):
-
+    uvclight.layer(IDGUVRequest)
+    
     def render(self):
         menu = GlobalMenu(self.context, self.request, self.view)
         menu.update()

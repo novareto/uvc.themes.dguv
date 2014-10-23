@@ -10,13 +10,13 @@ history = open(join('docs', 'HISTORY.txt')).read()
 
 
 install_requires = [
-    'setuptools',
     'cromlech.browser',
     'dolmen.forms.base',
     'fanstatic',
     'grokcore.component',
     'js.bootstrap >= 3.0.2',
     'js.jquery',
+    'setuptools',
     'uvc.basetheme',
     'uvc.design.canvas',
     'uvc.themes.btwidgets',

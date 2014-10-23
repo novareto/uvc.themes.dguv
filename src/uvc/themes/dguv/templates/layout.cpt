@@ -10,18 +10,22 @@
   </head>
   <body>
     <div id="top" class="container">
-      <div class="row">
-	<div class="pull-right">
-	  <img class="img-responsive logo"
-	       src="/fanstatic/uvc.themes.dguv/logo.png" />
-	</div>
-	<tal:top content="structure slot:uvc-pagetop" />
+      <div id="divLogo" class="col-md-4">
+	<h1 id="logo">
+	  <a href="/">
+	    <img class="img-responsive"
+		 src="/fanstatic/uvc.themes.dguv/logo_bgetem.png" />
+	  </a>
+	</h1>
       </div>
+      <tal:top content="structure slot:uvc-pagetop" />
     </div>
-    <div class="container content-wrapper"  id="content">
-      <div id="uvc-above-body" tal:content="structure slot:uvc-above-body" />
-      <div tal:content="structure content" />
-      <div id="uvc-below-body" tal:content="structure slot:uvc-below-body" />
+    <div class="container" id="content">
+      <div id="body" class="container content-wrapper">
+	<div id="uvc-above-body" tal:content="structure slot:uvc-above-body" />
+	<div tal:content="structure content" />
+	<div id="uvc-below-body" tal:content="structure slot:uvc-below-body" />
+      </div>
     </div>
     <div id="footer"
 	 tal:content="structure slot:uvc-footer" />
