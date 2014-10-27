@@ -89,3 +89,24 @@ body {
     padding: 39px 19px 14px;
     position: relative;
 }
+
+#site-action {
+  margin-top: 2em;
+  float: right;
+}
+
+#user-actions {
+  float: right;
+  clear: both;
+  margin-top: -3em;
+}
+
+#site-action li {
+  display: inline;
+  padding: 0 0.5em;
+  border-right: 1px solid black;
+}
+
+#site-action li.last {
+  border-right: 0px;
+}
