@@ -6,7 +6,8 @@
 import uvclight
 from dolmen.template import ITemplate
 from zope import interface
-from uvc.design.canvas.menus import GlobalMenu, IPersonalMenu
+from uvc.design.canvas.menus import IGlobalMenu, IPersonalMenu, INavigationMenu
+from uvc.design.canvas.menus import GlobalMenu
 from uvc.design.canvas.viewlets import GlobalMenuViewlet
 from grokcore.component import adapter, implementer
 from . import IDGUVRequest
@@ -32,7 +33,7 @@ class GlobalMenuViewlet(GlobalMenuViewlet):
         return menu.render()
 
 
-@adapter(GlobalMenu, interface.Interface)
+@adapter(IGlobalMenu, interface.Interface)
 @implementer(ITemplate)
 def global_template(context, request):
     return uvclight.get_template('globalmenu.cpt', __file__)
@@ -42,3 +43,9 @@ def global_template(context, request):
 @implementer(ITemplate)
 def usermenu_template(context, request):
     return uvclight.get_template('usermenu.cpt', __file__)
+
+
+@adapter(INavigationMenu, interface.Interface)
+@implementer(ITemplate)
+def nav_template(context, request):
+    return uvclight.get_template('navtemplate.cpt', __file__)

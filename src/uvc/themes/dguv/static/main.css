@@ -1,7 +1,8 @@
 html {
-  font-family: sans-serif;
+  font-family: "Helvetica Neue",​Helvetica,​Arial,​sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: 12px;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
 }
 
 #content {
+  margin-top: 4em;
   padding: 1em 0.5em;
   background: none repeat scroll 0 0 #e2eef8;
 }
@@ -109,4 +111,50 @@ body {
 
 #site-action li.last {
   border-right: 0px;
+}
+
+#site-action li a {
+  color: #004994 !important;
+  font-size: 12px;
+}
+
+#nav-menu {
+  position: absolute;
+  margin-top: -5em;
+  margin-left: -2em;
+  width: 970px;
+}
+
+#nav-menu > div {
+  background-color: #004994;
+}
+
+.navbar-collapse {
+  padding: 0;
+}
+
+.navbar-nav > li {
+  border-right: 1px solid white;
+}
+
+.navbar-nav > li.last {
+  //border-right: 1px solid transparent;
+}
+
+.navbar-nav > li > a {
+  line-height: 17px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 12px;
+  color: white !important;
+}
+
+.navbar-nav > li.active,
+.navbar-nav > li > a:hover {
+  background-color: #0088cc;
+  color: #004994 !important;
+}
+
+.navbar-nav > li.active a {
+  color: white !important;
 }

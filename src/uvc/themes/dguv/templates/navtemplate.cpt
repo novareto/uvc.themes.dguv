@@ -1,0 +1,25 @@
+<nav class="navbar" id="nav-menu">
+    <div class="navbar-header">
+      <button data-target=".navbar-nav-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+	<span class="">MENU</span>
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+      </button>
+    </div>
+    <!--/.navbar-collapse -->
+    <div class="collapse navbar-collapse navbar-nav-collapse">
+      <ul class="nav navbar-nav">
+	<li class="active">
+	  <a class="first" tal:attributes="href request.script_name">Home</a>
+	</li>
+	<tal:actions repeat="action component.viewlets">
+	  <li tal:attributes="class repeat['action'].end and 'last' or ''">
+	    <a tal:replace="structure action.render()" />
+	  </li>
+	</tal:actions>
+      </ul>
+    </div><!--/.navbar-collapse -->
+
+</nav>
