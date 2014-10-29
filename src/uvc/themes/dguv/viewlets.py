@@ -8,14 +8,18 @@ from dolmen.template import ITemplate
 from zope import interface
 from uvc.design.canvas.menus import IGlobalMenu, IPersonalMenu, INavigationMenu
 from uvc.design.canvas.menus import GlobalMenu
-from uvc.design.canvas.viewlets import GlobalMenuViewlet
+from uvc.design.canvas.viewlets import GlobalMenuViewlet, NavigationMenuViewlet
 from grokcore.component import adapter, implementer
 from . import IDGUVRequest
 from dolmen.message import receive
 from uvc.design.canvas.managers import IAboveContent
 
 
+uvclight.order.set(NavigationMenuViewlet, (-1, -1))
+
+
 class FlashMessages(uvclight.Viewlet):
+    uvclight.order(2)
     uvclight.layer(IDGUVRequest)
     uvclight.viewletmanager(IAboveContent)
     template = uvclight.get_template('flash.cpt', __file__)
