@@ -17,7 +17,6 @@ install_requires = [
     'js.bootstrap >= 3.0.2',
     'js.jquery',
     'setuptools',
-    'uvc.basetheme',
     'uvc.design.canvas',
     'uvc.themes.btwidgets',
     'uvclight',

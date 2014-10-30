@@ -21,6 +21,11 @@ body {
   width: auto;
 }
 
+#top, #content, #footer {
+  width: 1100px;
+  margin: 0 auto;
+}
+
 #top, #top-box {
     background-color: transparent;
 }
@@ -28,11 +33,6 @@ body {
 #global-submenus {
   position: absolute;
   top: 145px;
-}
-
-#navigation {
-  position: absolute;
-  margin-top: -62px;
 }
 
 #navigation .active {
@@ -93,14 +93,12 @@ body {
 }
 
 #site-action {
-  margin-top: 2em;
-  float: right;
+  margin: 2em 0 0 0;
+  text-align: right;
 }
 
 #user-actions {
   float: right;
-  clear: both;
-  margin-top: -3em;
 }
 
 #site-action li {
@@ -119,10 +117,11 @@ body {
 }
 
 #nav-menu {
-  position: absolute;
-  margin-top: -5em;
-  margin-left: -2em;
-  width: 970px;
+  margin: 4em 0 0 0;
+  padding: 0;
+  height: auto;
+  line-height: auto;
+  width: auto;
 }
 
 #nav-menu > div {
@@ -157,4 +156,12 @@ body {
 
 .navbar-nav > li.active a {
   color: white !important;
+}
+
+#navbar-login .nav > li > a {
+    color: #004994 !important;
+}
+
+#navbar-login .nav > li > a:hover {
+  background-color: transparent;
 }
