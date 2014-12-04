@@ -14,6 +14,21 @@ from uvc.design.canvas.viewlets import MenuViewlet
 from zope import interface
 
 
+class Navigation(uvclight.ViewletManager):
+    uvclight.name('navigation')
+    uvclight.context(uvclight.Interface)
+
+
+class BGHeader(uvclight.Viewlet):
+    uvclight.layer(IDGUVRequest)
+    uvclight.viewletmanager(managers.IPageTop)
+    uvclight.order(30)
+    template = uvclight.get_template('bgheader.cpt', __file__)
+    
+    def application_url(self):
+        return self.view.application_url()
+
+
 class ObjectActionMenuViewlet(MenuViewlet):
     uvclight.viewletmanager(managers.IAboveContent)
     uvclight.context(IContent)
@@ -41,7 +56,7 @@ class PersonalMenuViewlet(MenuViewlet):
 
     
 class NavigationMenuViewlet(MenuViewlet):
-    uvclight.viewletmanager(managers.IPageTop)
+    uvclight.viewletmanager(Navigation)
     uvclight.order(30)
     menu = menus.NavigationMenu
 

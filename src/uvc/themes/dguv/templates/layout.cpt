@@ -1,33 +1,29 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title tal:content="layout.title" />
-    <base href="" tal:attributes="href layout.base" /> 
-    <tal:header tal:content="structure slot:uvc-headers" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.css" />
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
   </head>
   <body>
-    <div id="top" class="container">
-      <div id="divLogo" class="col-md-4">
-	<h1 id="logo">
-	  <a href="/">
-	    <img class="img-responsive"
-		 src="/fanstatic/uvc.themes.dguv/logo_bgetem.png" />
-	  </a>
-	</h1>
-      </div>
-      <tal:top content="structure slot:uvc-pagetop" />
+    <div class="container" id="siteheader">
+      <div id="header" class="row"
+	   tal:content="structure provider:uvc-pagetop"> </div>
+      <div id="navigation" class="row"
+	   tal:content="structure provider:navigation"> </div>
     </div>
-    <div class="container" id="content">
-      <div id="body" class="container content-wrapper">
-	<div id="uvc-above-body" tal:content="structure slot:uvc-above-body" />
-	<div tal:content="structure content" />
-	<div id="uvc-below-body" tal:content="structure slot:uvc-below-body" />
+    <div class="container" id="main">
+      <div class="content">
+        <div tal:content="structure provider:uvc-above-body"> </div>
+        <div tal:content="structure content"> </div>
+        <div tal:content="structure provider:uvc-below-body"> </div>
       </div>
+      <div id="footer" tal:content="structure provider:uvc-footer"> </div>
     </div>
-    <div id="footer"
-	 tal:content="structure slot:uvc-footer" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>
