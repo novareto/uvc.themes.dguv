@@ -45,6 +45,8 @@
       <tal:widget metal:define-macro="field-inline"
 		  tal:content="structure widget.render()" />
 
+      <h1> CHAMP </h1>
+
       <p tal:condition="widget.error"
 	 class="field-error help-block" tal:content="widget.error.title" />
 

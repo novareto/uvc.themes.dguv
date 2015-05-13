@@ -55,6 +55,7 @@ setup(name=name,
       entry_points={
          'fanstatic.libraries': [
             'uvc.themes.dguv = uvc.themes.dguv.resources:library',
+            'datepicker = uvc.themes.dguv.resources:datepicker',
             ],
         }
       )
